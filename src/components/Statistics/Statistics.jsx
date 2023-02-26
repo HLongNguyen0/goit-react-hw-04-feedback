@@ -1,6 +1,6 @@
-import { StatisticsList, StatisticsElem } from './Statistics.styled';
-import Notification from './Notification/Notification';
-import PropTypes from 'prop-types';
+import { StatisticsList, StatisticsElem } from "./Statistics.styled";
+import Notification from "./Notification/Notification";
+import PropTypes from "prop-types";
 
 function Statistics({ good, neutral, bad, total, positivePercentage }) {
   const currentState = { good, neutral, bad };
@@ -9,7 +9,7 @@ function Statistics({ good, neutral, bad, total, positivePercentage }) {
     <StatisticsList>
       {total() ? (
         <>
-          {keys.map(key => (
+          {keys.map((key) => (
             <StatisticsElem key={key}>
               {key} : {currentState[key]}
             </StatisticsElem>
